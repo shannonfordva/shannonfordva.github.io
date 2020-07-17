@@ -43,7 +43,7 @@ $(document).ready(function() {
       if (!$(this).hasClass('active')) {
         $(this).text('Save Changes');
         $(this).addClass('active');
-        $('.banner .container, .filter, .save-actions, .select-logos').hide();
+        $('.banner .container, .filter, .save-actions, .select-logos, .beta-overlay-bg').hide();
         $('.device-toggle').css('opacity','0');
         $('#banner-image').addClass('drag-and-resize');
       } else {
