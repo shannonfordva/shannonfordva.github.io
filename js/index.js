@@ -28,6 +28,7 @@ $(document).ready(function() {
 
     // Save banner image only
     $('.save-image-only').click(function() {
+		$('.beta-overlay-bg').hide();
       $('.banner .banner-text, .edit-image, .filter').attr('data-html2canvas-ignore',true);
       saveImage()
     });
