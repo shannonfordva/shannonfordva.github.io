@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     switchBannerType()
 
-    // Listen to form fields
+  // Listen to form fields
     $('.primary-headline').keyup(function() {
       var primaryHeadline = $(this).val();
       $('.banner-text h1').html(primaryHeadline);
@@ -11,11 +11,16 @@ $(document).ready(function() {
       var secondaryHeadline = $(this).val();
       $('.banner-text h2').html(secondaryHeadline);
     });
-    $('.terms-and-conditions').keyup(function() {
+    $('.desktop-terms-and-conditions').keyup(function() {
       var termsConditions = $(this).val();
-      $('.banner-text h4').html(termsConditions);
+      $('.hidden-xs h4').html(termsConditions);
+    });
+  $('.mobile-terms-and-conditions').keyup(function() {
+      var termsConditions = $(this).val();
+      $('.hidden-l h4').html(termsConditions);
     });
 
+	
     // Listen to custom banner height
     $('.custom-height').keyup(function() {
       var customHeight = $(this).val();
