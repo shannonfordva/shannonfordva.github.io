@@ -154,7 +154,7 @@ body {
 #page .banner .container .search {
     float: left;
     width: 327px;
-    height: 595px;
+    height: 440px;
     border: 1px #dedede solid;
     border-top: 0;
     opacity: 0.9;
@@ -169,6 +169,7 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
+
 
 
 
@@ -243,16 +244,32 @@ font-size: 16px;
     position: absolute;
     top: 0;
     right: 0px;
-    width: auto;
-   
+    width: 100%;
     background: no-repeat;
     height: 100%;
     z-index: 2;
     -webkit-user-select: none;
     user-select: none;
     object-fit: cover;
+  
+}
+
+
+#page.is-mobile-banner .banner #banner-image {
+   position: absolute;
+    top: 0;
+    right: 0px;
+    width: 640px;
+    background: no-repeat;
+    height: 440px;
+    z-index: 2;
+    -webkit-user-select: none;
+    user-select: none;
+    object-fit: cover;
+    background: no-repeat ;center center #f1f1f1;
    
 }
+
 #page .banner #banner-image.filtered {
     opacity: 0.75;
 }
@@ -271,9 +288,9 @@ font-size: 16px;
     line-height: 2em;
     box-sizing: border-box;
     height: 120px;
-    width: 580px;
+    width: 448px;
     overflow: hidden;
-    color: #36424a;
+    color: white;
     border: 2px dashed #cdcdcd;
     background: transparent;
 }
@@ -312,28 +329,29 @@ font-size: 16px;
 }
 #page.is-mobile-banner {
     width: 640px;
-    height: 390px;
+   
     border: 2px dashed #cdcdcd;
 }
 #page.is-mobile-banner .banner {
     width: 640px;
-    height: 390px;
+    height: 768px;
 }
 #page.is-mobile-banner .banner .container {
     width: 640px;
-    height: 390px;
+    height: 440px;
 }
 #page.is-mobile-banner .banner .container .search {
     display: none;
 }
 #page.is-mobile-banner .banner .container .banner-text {
-    float: none;
+   float: none;
     box-sizing: border-box;
-padding: 20px 0 0 20px;
     width: 520px;
-    height: 390px;
-    text-align: left;
-  color: white;
+    height: 10px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 40px 0 0;
 }
   #page.is-mobile-banner .banner .container .banner-text h1{
     font-size: 48px;
@@ -343,13 +361,14 @@ padding: 20px 0 0 20px;
   }
 #page.is-mobile-banner .banner .container .banner-text h2 {
     font-size: 24px;
-    line-height: 36px;
+    line-height: 32px;
   margin-top: 0px;
   
 }
 #page.is-mobile-banner .banner .container .banner-text h4 {
-    width: 100%;
-    text-align: left;
+    width: 520px;
+    text-align: center;
+    bottom: 30px;
 }
 #page.is-mobile-banner .banner .select-logos {
     display: none;
@@ -407,7 +426,7 @@ padding: 20px 0 0 20px;
 #page.is-responsive-desktop-banner .banner .select-logos,
 #page.is-responsive-mobile-banner .banner .select-logos {
     position: relative;
-    top: auto;
+    
     left: auto;
     margin: -235px auto 0;
 }
@@ -429,7 +448,7 @@ padding: 20px 0 0 20px;
 
 
 .is-responsive-desktop-banner .beta-overlay  {
-    min-width: 1100px;
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
   display: inline-block;
@@ -438,8 +457,10 @@ padding: 20px 0 0 20px;
 }
 
 .is-responsive-desktop-banner  .beta-overlay-bg{
+  
   backdrop-filter: blur(16px);
-    background: rgba(81,38,152,0.7) 0 0 no-repeat padding-box;
+    
+  background: rgba(68,26,139,0.7) 0 0 no-repeat padding-box;
     border-radius: 0 0 4px 4px;
     height: 580px;
   
@@ -563,40 +584,73 @@ padding: 20px 0 0 20px;
 }
 
    .is-mobile-banner  .beta-overlay-bg{
-     backdrop-filter: none;
-    background: rgba(54,66,74,0.8) 0 0 no-repeat padding-box;
-    height: 640px;
-    width: 100%;
+  backdrop-filter: none;
+    background: rgba(68,26,139,1) 0 0 no-repeat padding-box;
+    height: 328px;
+    position: relative;
+    top: 440px;
   
   }
 
+#page.is-mobile-banner .banner .container .hidden-xs {
+    display: none;
+  }
+#page.is-responsive-desktop-banner .banner .container 
+.hidden-l {
+    display: none;
+  }
 
-
-
+.resolution-check {
+    display: none;
+  }
 
 @media only screen and (max-width: 824px) {
-  
-  .is-responsive-desktop-banner .beta-overlay-bg  {
-     backdrop-filter: none;
-    background: rgba(54,66,74,0.8) 0 0 no-repeat padding-box;
-    height: 226px;
-    width: 100%;
-  
+  .resolution-check {
+    display: block;
+  }
+  #page .banner #banner-image {
+    height: 220px;
+        object-position: center;
   }
   
-   .is-responsive-desktop-banner .beta-overlay  {
+  .is-responsive-desktop-banner .beta-overlay-bg  {
+        backdrop-filter: none;
+ background: rgba(68,26,139,1) 0 0 no-repeat padding-box;
     
+   WIDTH: 100%;
+    height: 164px;
+   
+    position: relative;
+    top: 219px;
+    
+}
+  
+ 
+  .hidden-xs {
+    display: none;
+  }
+  #page.is-responsive-desktop-banner .banner .container 
+.hidden-l  {
+    display: block;
+  }
+   .is-responsive-desktop-banner .beta-overlay  {
+    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
   
   }
-  
-  
-  
-  .is-responsive-desktop-banner .banner .container .banner-text {
-    padding: 20px 0 0 20px;
-    width: 260px;
+
+.is-responsive-desktop-banner .banner .container .banner-text {
+  width: 260px;
+ float: none !important;
+  margin: 0 auto;
+    padding: 20px 0 0;
+    text-align: center;
+  height: auto;
+  display: block !important;
 }
+  
+ 
   .select-logos {
     display: none
   }
@@ -616,14 +670,29 @@ padding: 20px 0 0 20px;
     width: 250px;
   }
   
+  #page.is-responsive-desktop-banner {
+    height: 384px;
   }
-
-
-
-@media only screen and (max-width: 847px) {
-  #page.is-responsive-desktop-banner .banner, #page .banner .container, #page.is-responsive-desktop-banner, #page.is-responsive-mobile-banner{
-    height: 226px;
+  #page.is-responsive-desktop-banner .banner {
+    width: 100%;
+    height: 384px;
+    overflow: hidden;
   }
+  
+  #page .banner .container, page.is-responsive-desktop-banner, #page.is-responsive-mobile-banner{
+    width: 640px;
+    height: 384px;
+    top: 0;
+  }
+  
+  
+  #page.is-responsive-desktop-banner .banner .container .search {
+    display: none;
+    position: absolute;
+    height: 220px;
+    background-size: cover;
+}
+  
 }
 @media only screen and (min-width: 847px) and (max-width: 1024px) {
   #page.is-responsive-desktop-banner .banner, #page .banner .container, #page.is-responsive-desktop-banner, #page.is-responsive-mobile-banner {

@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     // Save banner image only
     $('.save-image-only').click(function() {
-		$('.beta-overlay-bg').hide();
+		     $('.beta-overlay-bg').hide();
       $('.banner .banner-text, .edit-image, .filter').attr('data-html2canvas-ignore',true);
       saveImage()
     });
@@ -44,7 +44,7 @@ $(document).ready(function() {
       if (!$(this).hasClass('active')) {
         $(this).text('Save Changes');
         $(this).addClass('active');
-        $('.banner .container, .filter, .save-actions, .select-logos, .beta-overlay-bg').hide();
+        $('.banner .container, .filter, .save-actions, .select-logos').hide();
         $('.device-toggle').css('opacity','0');
         $('#banner-image').addClass('drag-and-resize');
       } else {
@@ -148,10 +148,11 @@ function switchCharacterLimit(device) {
 
 function changeColor() {
   var headlineColor = $('.headline-color').val();
-  var termsColor = $('.terms-color').val();
-  $('.is-desktop-banner .banner-text h1,.is-desktop-banner .banner-text h2').css('color',headlineColor);
-  $('.is-desktop-banner .banner-text h4').css('color',termsColor);
+  $('#page .banner #banner-image').css('object-position',headlineColor);
+  
+   
 }
+
 
 function readBanner(input) {
   if (input.files && input.files[0]) {
